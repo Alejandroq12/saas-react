@@ -1,6 +1,12 @@
 const Header = () => {
   return (
-    <div>Header...</div>
+    <header>
+      <div>
+        <a>
+          <img src="/images/xora.svg" width={115} height={55} alt="logo"/>
+        </a>
+      </div>
+    </header>
   )
 }
 
