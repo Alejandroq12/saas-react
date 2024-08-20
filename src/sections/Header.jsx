@@ -1,4 +1,5 @@
 import { Link as LinkScroll } from 'react-scroll';
+import { useState } from 'react';
 
 const NavLink = ({ title }) => (
   <LinkScroll
@@ -10,6 +11,7 @@ const NavLink = ({ title }) => (
 );
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 z-50 w-full py-10">
       <div className="container flex h-14 items-center max-lg:px-5">
@@ -46,6 +48,13 @@ const Header = () => {
             </nav>
           </div>
         </div>
+
+        <button
+          className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+          onClick={() => setIsOpen((prevState) => !prevState)}
+        >
+          <img src={`/images/${isOpen ? "close" : "magic"}.svg`} alt="magic" className="size-1/2 object-contain"/>
+        </button>
       </div>
     </header>
   );
