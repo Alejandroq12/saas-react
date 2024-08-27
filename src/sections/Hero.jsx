@@ -1,4 +1,4 @@
-import { Element } from "react-scroll";
+import { Element, Link as LinkScroll } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -12,6 +12,12 @@ const Hero = () => {
             <h1 className="mb-6 h1 text-p4 uppercase max-lg:mb-7 max-lg:h2 max-md: max-md:mb-4 max-md:text-5xl max-md:leading-12">
               Amazingly simple
             </h1>
+            <p className="max-w-440 mb-14 body-1 max-md:mb-10">
+              We designed the best business plans, quick to apply, and with high ROI.
+            </p>
+            <LinkScroll to="features" offset={-100} spy smooth>
+              Text
+            </LinkScroll>
           </div>
         </div>
       </Element>
