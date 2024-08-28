@@ -1,4 +1,5 @@
 import { Element, Link as LinkScroll } from "react-scroll";
+import Button from "../components/button";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
               We designed the best business plans, quick to apply, and with high ROI.
             </p>
             <LinkScroll to="features" offset={-100} spy smooth>
-              Text
+              <Button icon="/images/zap.svg">Buy it</Button>
             </LinkScroll>
           </div>
         </div>
